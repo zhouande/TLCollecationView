@@ -7,6 +7,8 @@
 //
 
 #import "TLCollectionViewController.h"
+#import "TLCollectionViewCell.h"
+static NSString * const reuseIdentifier = @"Cell";
 
 @interface TLCollectionViewController ()
 
@@ -14,7 +16,6 @@
 
 @implementation TLCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,8 +24,9 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    self.collectionView.backgroundColor = [UIColor redColor];
+    self.collectionView.contentInset = UIEdgeInsetsZero;
+    [self.collectionView registerClass:[TLCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     // Do any additional setup after loading the view.
 }
 
@@ -44,26 +46,28 @@ static NSString * const reuseIdentifier = @"Cell";
 */
 
 #pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
-}
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    return 100;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    TLCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.label.text = [NSString stringWithFormat:@"%zi", indexPath.item];
+    cell.label.frame = cell.bounds;
     // Configure the cell
     
     return cell;
 }
 
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return CGSizeMake(100, 100);
+//}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"您选中了==%zi", indexPath.row);
+}
 #pragma mark <UICollectionViewDelegate>
 
 /*

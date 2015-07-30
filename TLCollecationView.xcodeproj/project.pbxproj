@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		1314B2B81B675DC000173A4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2B71B675DC000173A4F /* main.m */; };
 		1314B2BB1B675DC000173A4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2BA1B675DC000173A4F /* AppDelegate.m */; };
-		1314B2BE1B675DC000173A4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2BD1B675DC000173A4F /* ViewController.m */; };
 		1314B2C11B675DC000173A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1314B2BF1B675DC000173A4F /* Main.storyboard */; };
 		1314B2C31B675DC000173A4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1314B2C21B675DC000173A4F /* Images.xcassets */; };
 		1314B2C61B675DC000173A4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1314B2C41B675DC000173A4F /* LaunchScreen.xib */; };
 		1314B2D21B675DC000173A4F /* TLCollecationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2D11B675DC000173A4F /* TLCollecationViewTests.m */; };
+		1314B2DD1B675DD600173A4F /* TLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2DC1B675DD600173A4F /* TLCollectionViewController.m */; };
+		1314B2E01B67600C00173A4F /* TLCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2DF1B67600C00173A4F /* TLCollectionViewFlowLayout.m */; };
+		1314B2E31B6763D200173A4F /* TLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314B2E21B6763D200173A4F /* TLCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		1314B2B71B675DC000173A4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1314B2B91B675DC000173A4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1314B2BA1B675DC000173A4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1314B2BC1B675DC000173A4F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1314B2BD1B675DC000173A4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1314B2C01B675DC000173A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1314B2C21B675DC000173A4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1314B2C51B675DC000173A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1314B2CB1B675DC000173A4F /* TLCollecationViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TLCollecationViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1314B2D01B675DC000173A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1314B2D11B675DC000173A4F /* TLCollecationViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCollecationViewTests.m; sourceTree = "<group>"; };
+		1314B2DB1B675DD600173A4F /* TLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCollectionViewController.h; sourceTree = "<group>"; };
+		1314B2DC1B675DD600173A4F /* TLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCollectionViewController.m; sourceTree = "<group>"; };
+		1314B2DE1B67600C00173A4F /* TLCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1314B2DF1B67600C00173A4F /* TLCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1314B2E11B6763D200173A4F /* TLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCollectionViewCell.h; sourceTree = "<group>"; };
+		1314B2E21B6763D200173A4F /* TLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				1314B2B91B675DC000173A4F /* AppDelegate.h */,
 				1314B2BA1B675DC000173A4F /* AppDelegate.m */,
-				1314B2BC1B675DC000173A4F /* ViewController.h */,
-				1314B2BD1B675DC000173A4F /* ViewController.m */,
+				1314B2DE1B67600C00173A4F /* TLCollectionViewFlowLayout.h */,
+				1314B2DF1B67600C00173A4F /* TLCollectionViewFlowLayout.m */,
+				1314B2DB1B675DD600173A4F /* TLCollectionViewController.h */,
+				1314B2DC1B675DD600173A4F /* TLCollectionViewController.m */,
+				1314B2E11B6763D200173A4F /* TLCollectionViewCell.h */,
+				1314B2E21B6763D200173A4F /* TLCollectionViewCell.m */,
 				1314B2BF1B675DC000173A4F /* Main.storyboard */,
 				1314B2C21B675DC000173A4F /* Images.xcassets */,
 				1314B2C41B675DC000173A4F /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1314B2BE1B675DC000173A4F /* ViewController.m in Sources */,
+				1314B2E01B67600C00173A4F /* TLCollectionViewFlowLayout.m in Sources */,
+				1314B2DD1B675DD600173A4F /* TLCollectionViewController.m in Sources */,
+				1314B2E31B6763D200173A4F /* TLCollectionViewCell.m in Sources */,
 				1314B2BB1B675DC000173A4F /* AppDelegate.m in Sources */,
 				1314B2B81B675DC000173A4F /* main.m in Sources */,
 			);
@@ -348,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TLCollecationView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TLCollecationView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

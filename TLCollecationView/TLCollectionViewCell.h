@@ -10,4 +10,6 @@
 
 @interface TLCollectionViewCell : UICollectionViewCell
 
+@property (strong, nonatomic) UILabel *label;
+
 @end
